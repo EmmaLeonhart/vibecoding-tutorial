@@ -23,7 +23,7 @@ Pick one and learn it well. The specific agent matters less than using an agent 
 
 ## cleanvibe — Project Scaffolding
 
-[cleanvibe](https://github.com/Immanuelle/cleanvibe) is a Python library designed specifically for vibe coding workflows. It scaffolds new projects with opinionated documentation and proper git setup.
+[cleanvibe](https://github.com/Emma-Leonhart/cleanvibe) is a Python library designed specifically for vibe coding workflows. It scaffolds new projects with opinionated documentation and proper git setup.
 
 ### Installation
 
