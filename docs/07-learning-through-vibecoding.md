@@ -72,6 +72,40 @@ Most people who start with vibe coding follow a natural progression:
 
 This progression happens naturally if you stay engaged and curious. Don't rush it, but don't be passive either.
 
+## Advanced Tips: If You Want to Go Deeper
+
+None of these are required for most projects. But if you want your code to actually perform well — not just work — these habits will take you a lot further.
+
+### Ask the AI for Time Complexity Analysis
+
+Any time the AI writes a function that processes data, you can ask:
+
+> "What is the time complexity of this function? Is there a more efficient way to do this?"
+
+The AI will explain it in Big O notation (`O(n)`, `O(n²)`, etc.) and often suggest improvements. You don't need to understand the math deeply — just knowing that `O(n²)` is much worse than `O(n log n)` for large inputs is enough to start making better decisions. Over time, you'll start recognizing inefficient patterns yourself.
+
+### Learn the Basics of Data Structures
+
+Knowing what data structures exist — and roughly what they're good at — is one of the highest-leverage pieces of knowledge you can pick up as a vibe coder. You don't need to implement them by hand. You just need to know when to reach for them.
+
+Some useful ones to understand at a high level:
+
+- **Lists / arrays** — ordered, good for iteration
+- **Dictionaries / hash maps** — fast lookup by key
+- **Sets** — fast deduplication and membership checks
+- **Queues and stacks** — for ordered processing
+- **Trees and graphs** — for hierarchical or relational data
+
+When you tell the AI "use a dictionary here for O(1) lookups instead of searching the list," you're operating at a level most beginners don't reach. That knowledge comes from understanding data structures, not from memorizing syntax.
+
+### Profile Before You Optimize
+
+A useful habit: ask the AI to add timing or profiling to your code before you start optimizing. You might be surprised where the actual bottleneck is. Optimizing the wrong thing wastes time.
+
+> "Add some basic profiling so I can see which parts of this script are slowest."
+
+Then optimize what the data shows, not what you assumed.
+
 ## Key Takeaway
 
 Vibe coding is a legitimate entry point into software development. But treat it as a starting point, not an endpoint. The most effective vibe coders are the ones who continuously build their own understanding of the code they're collaborating on.
