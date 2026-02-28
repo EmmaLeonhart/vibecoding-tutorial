@@ -41,6 +41,22 @@ Vibe coding lowers the barrier to entry, but it doesn't eliminate the need to un
 
 Think of it like driving a car with advanced cruise control. The car does a lot of the work, but you still need to understand the road, know where you're going, and be ready to take the wheel.
 
+## Vibe Coding Is a Capability Multiplier
+
+Here is something important that often gets missed: **vibe coding scales with what you already know.**
+
+It is not a great equalizer that brings everyone to the same level. It is a force multiplier. The more programming knowledge you bring to the table, the more powerful your results. An experienced developer using vibe coding can build things that would take weeks alone; a beginner using it will still run into conceptual walls they don't have the vocabulary to break through.
+
+This also means you should not think of vibe coding as a substitute for learning. It is better understood as a way to act at a higher level than your current skills would normally allow — but you are still bounded by what you understand.
+
+### You Can Use Libraries You've Never Touched the API For
+
+One of the most practical benefits of this is what happens with third-party libraries. Traditionally, integrating a library means reading through its documentation, understanding its method signatures, handling its error types, figuring out which version introduced the feature you need. It is often the most tedious part of building something.
+
+With vibe coding, you only need to know **what a library does** — not exactly how to use it. If you know that `SQLAlchemy` handles database ORM for Python, or that `Recharts` builds charts in React, or that `Celery` manages async task queues, that is enough. Tell the AI what you want to build and which library you want it to use, and it will handle the API surface for you.
+
+This is a genuine productivity unlock. You can incorporate tools you've heard about but never had time to properly learn, and your project benefits from them immediately. The knowledge that matters is architectural — "this library solves this kind of problem" — not syntactic.
+
 ## The Right Mindset
 
 Vibe coding works best when you approach it as a **collaboration**, not a delegation. The AI is an extremely fast and knowledgeable partner, but it doesn't know your goals, your users, or your constraints the way you do. Your job is to provide direction, review output, and maintain the big picture.
