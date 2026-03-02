@@ -24,6 +24,8 @@
 
 GitHub is where your code lives online. It tracks every change you make so you can always undo mistakes.
 
+For more detail, see the full [GitHub reference page](tools/github.md).
+
 1. Go to [github.com](https://github.com)
 2. Click **"Sign up"** in the top-right corner
 3. Enter your email address, create a password, and pick a username
@@ -37,7 +39,7 @@ GitHub is where your code lives online. It tracks every change you make so you c
 
 ## Step 2: Install GitHub Desktop
 
-GitHub Desktop is a visual tool that lets you see exactly what changes the AI made to your code. This is one of the most important tools for vibe coding.
+GitHub Desktop is a visual tool that lets you see exactly what changes the AI made to your code. This is one of the most important tools for vibe coding. For more detail, see the full [GitHub Desktop reference page](tools/github-desktop.md).
 
 1. Go to [desktop.github.com](https://desktop.github.com)
 2. Click **"Download for Windows"** (or Mac)
@@ -66,7 +68,7 @@ You now have the entire tutorial on your computer.
 
 ## Step 4: Install Visual Studio Code
 
-VS Code is a free code editor. You'll use it to look at files and understand what Claude is building for you.
+VS Code is a free code editor. You'll use it to look at files and understand what Claude is building for you. For more detail, see the full [VS Code reference page](tools/vscode.md).
 
 1. Go to [code.visualstudio.com](https://code.visualstudio.com)
 2. Click the big **"Download"** button
@@ -91,7 +93,7 @@ You'll see all the files on the left sidebar. You can click any file to read it.
 
 ## Step 5: Install Node.js
 
-Claude Code requires Node.js to run. This is a one-time install.
+Claude Code requires Node.js to run. This is a one-time install. For more detail, see the full [Node.js reference page](tools/nodejs.md).
 
 1. Go to [nodejs.org](https://nodejs.org)
 2. Download the **LTS** version (the one that says "Recommended for Most Users")
@@ -108,7 +110,7 @@ You should see a version number like `v22.x.x`. If you do, Node.js is installed.
 
 ## Step 6: Install Python
 
-Python is needed for `cleanvibe`, the project scaffolding tool.
+Python is needed for `cleanvibe`, the project scaffolding tool. For more detail, see the full [Python reference page](tools/python.md).
 
 1. Go to [python.org/downloads](https://python.org/downloads)
 2. Click the big **"Download Python"** button
@@ -135,8 +137,8 @@ This repository includes a setup script that installs Claude Code and cleanvibe 
 4. Wait for it to finish — it will tell you when it's done
 
 The script installs:
-- **Claude Code** — your AI coding agent
-- **cleanvibe** — project scaffolding for vibe coding
+- **[Claude Code](tools/claude-code.md)** — your AI coding agent
+- **[cleanvibe](tools/cleanvibe.md)** — project scaffolding for vibe coding
 
 If you see any red error text, read the message carefully. The most common issue is that Node.js or Python wasn't added to PATH — revisit Steps 5 and 6.
 

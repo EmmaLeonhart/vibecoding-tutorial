@@ -20,6 +20,8 @@ If you are reading this file, the user is most likely a **complete beginner** fo
 - `docs/00-beginner-setup.md` — Complete beginner setup guide (accounts, installs, first session)
 - `docs/01-07` — Tutorial chapters covering core vibe coding topics
 - `docs/08-project-ideas.md` — Starter project ideas with exact prompts to use
+- `docs/tools/` — Detailed reference pages for each tool (GitHub, GitHub Desktop, VS Code, Node.js, Python, Claude Code, cleanvibe)
+- `docs/advanced/` — Advanced topics (databases, APIs, deployment, Docker, CI/CD, GitHub Pages, environment variables)
 - `setup.bat` — One-click installer for Claude Code and cleanvibe
 - `!runClaude.bat` — Quick launcher for Claude Code in the project directory
 - `claude.md` — This file (AI agent instructions)

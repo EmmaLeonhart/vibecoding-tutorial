@@ -82,6 +82,42 @@ Advice for beginners on building real programming knowledge alongside AI-assiste
 ### [8. Project Ideas for Beginners](docs/08-project-ideas.md)
 15 starter projects with exact prompts to give Claude — from to-do lists to web apps.
 
+## Tool Reference
+
+Detailed pages for every tool used in this tutorial:
+
+| Tool | What It Is |
+|------|-----------|
+| [GitHub](docs/tools/github.md) | Where your code lives online |
+| [GitHub Desktop](docs/tools/github-desktop.md) | Visual tool for reviewing AI changes and committing |
+| [Visual Studio Code](docs/tools/vscode.md) | Free code editor with extensions and built-in terminal |
+| [Node.js](docs/tools/nodejs.md) | JavaScript runtime (required for Claude Code) |
+| [Python](docs/tools/python.md) | Programming language (required for cleanvibe) |
+| [Claude Code](docs/tools/claude-code.md) | AI coding agent that works directly in your codebase |
+| [cleanvibe](docs/tools/cleanvibe.md) | Project scaffolding tool for vibe coding |
+
+## Advanced Topics
+
+Ready to go deeper? These guides cover intermediate and advanced concepts:
+
+### Databases
+| Database | Best For |
+|----------|---------|
+| [SQLite](docs/advanced/sqlite.md) | File-based database, no server needed, built into Python |
+| [MongoDB](docs/advanced/mongodb.md) | Flexible document storage with JSON-like data |
+| [Apache Jena Fuseki](docs/advanced/apache-jena-fuseki.md) | Knowledge graphs, RDF data, and SPARQL queries |
+| [Neo4j](docs/advanced/neo4j.md) | Graph database for highly connected data |
+
+### Infrastructure & Deployment
+| Topic | What You'll Learn |
+|-------|------------------|
+| [GitHub Pages](docs/advanced/github-pages.md) | Free static site hosting with optional custom domains |
+| [Working with APIs](docs/advanced/apis.md) | Consuming and building REST APIs |
+| [Environment Variables](docs/advanced/environment-variables.md) | Keeping secrets out of your code |
+| [Docker](docs/advanced/docker.md) | Containerizing your apps for consistent environments |
+| [Deployment](docs/advanced/deployment.md) | Getting your projects live on the internet |
+| [CI/CD with GitHub Actions](docs/advanced/ci-cd.md) | Automated testing and deployment |
+
 ## Core Principles
 
 1. **Know what your program does** — You should always have a general understanding of what the AI is building
