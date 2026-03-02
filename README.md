@@ -2,6 +2,27 @@
 
 A practical guide to vibe coding — the discipline of building software through AI collaboration with intention, documentation, and quality practices.
 
+---
+
+## Brand New? Start Here
+
+If you've never coded before or need help setting up your tools, follow the beginner guide. It walks you through everything step by step — from creating a GitHub account to running your first AI coding session.
+
+### [>>> Complete Beginner Setup Guide <<<](docs/00-beginner-setup.md)
+
+The guide covers:
+1. Creating a GitHub account
+2. Installing GitHub Desktop
+3. Cloning this repository
+4. Installing VS Code, Node.js, and Python
+5. Running the one-click setup script (`setup.bat`)
+6. Getting your API key and launching Claude Code
+7. Your first vibe coding session
+
+When you're ready for project ideas, check out **[Project Ideas for Beginners](docs/08-project-ideas.md)** — 15 starter projects with exact instructions for what to tell Claude.
+
+---
+
 ## What Is Vibe Coding?
 
 Vibe coding is **not** just asking ChatGPT to write some code for you.
@@ -34,6 +55,9 @@ This creates a new project directory with a git repository, documentation scaffo
 
 ## Tutorial Contents
 
+### [0. Complete Beginner Setup Guide](docs/00-beginner-setup.md)
+Everything you need to go from zero to your first AI coding session — accounts, installs, and your first project.
+
 ### [1. What Vibe Coding Actually Is](docs/01-what-is-vibecoding.md)
 Understanding the discipline beyond the buzzword — why it requires intentionality and programming awareness.
 
@@ -54,6 +78,9 @@ Technical debt, debugging difficulty, and security concerns are real — and all
 
 ### [7. Learning to Code Through Vibe Coding](docs/07-learning-through-vibecoding.md)
 Advice for beginners on building real programming knowledge alongside AI-assisted development.
+
+### [8. Project Ideas for Beginners](docs/08-project-ideas.md)
+15 starter projects with exact prompts to give Claude — from to-do lists to web apps.
 
 ## Core Principles
 
