@@ -78,3 +78,11 @@ When helping the user with any task, always model the practices this tutorial te
 - **Do not enter planning-only mode.** Put planning thoughts into `planning/*.md` files and commit them. Visible thinking is the lesson.
 - **Keep this file and README.md current.** If the project structure or conventions change, update both immediately.
 - **Write commit messages that explain why**, not just what changed. Good commit hygiene is what this tutorial is teaching.
+
+## Queue and longer-horizon work
+
+(Clarity model adopted from the `cleanvibe` scaffold — the bar for "clear project docs," and the same discipline this tutorial teaches.)
+
+- **`queue.md`** — what is being worked on *right now*: concrete, executable steps. Deleted in the same commit that completes them — no checkmarks, no "done" markers, no status narration. If a line is still there, it is not done. Not in `queue.md` = not in scope this session.
+- **`todo.md`** — the long-term horizon: abstract, multi-session goals (a destination, not a step). The *basis for* `queue.md`; parked / reference material lives here, never in `queue.md`.
+- **Forward flow only:** `todo.md` → `queue.md` → task tool → `git log`. Items only move forward; done work is deleted, not annotated. Create these files when concrete work is queued; a stale `queue.md` is worse than none.
