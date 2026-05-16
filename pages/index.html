@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Vibe Coding Tutorial">
+  <meta property="og:description" content="A practical guide to vibe coding — building software through AI collaboration with intention, documentation, version control, and tests. From zero to your first AI coding session.">
+  <meta property="og:url" content="https://vibecoding.emmaleonhart.com/">
+  <meta property="og:site_name" content="Vibe Coding Tutorial">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Vibe Coding Tutorial">
+  <meta name="twitter:description" content="Vibe coding done right — a serious, documented, version-controlled workflow, not just asking a chatbot for code.">
+  <meta name="description" content="A practical, beginner-friendly guide to vibe coding: the discipline of building real software through AI collaboration with documentation, version control, and tests.">
+  <title>Vibe Coding Tutorial</title>
+
+  <!-- Canonical identity: set theme before first paint (dark default). -->
+  <script>(function(){try{var t=localStorage.getItem('theme');if(t!=='light'&&t!=='dark')t='dark';document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','dark');}})();</script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <!-- The ONE shared identity: palette, buttons, toggle, type. Same file as emmaleonhart.com/identity.css. -->
+  <link rel="stylesheet" href="/identity.css">
+
+  <style>
+    /* identity.css owns the palette, .btn, .theme-toggle, .eyebrow,
+       .card, .aurora and type. This page keeps only its own layout. */
+    html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+    body {
+      display: flex; justify-content: center;
+      padding: 110px 24px 130px;
+      position: relative; overflow-x: hidden;
+      font-feature-settings: 'cv11', 'ss01', 'ss03';
+    }
+    .container { max-width: 760px; width: 100%; position: relative; z-index: 2; }
+
+    /* Top bar — matches emmaleonhart.com .site-nav */
+    .site-nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 50;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 18px; padding: 15px 28px;
+      background: color-mix(in srgb, var(--bg) 72%, transparent);
+      backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .site-nav .brand {
+      font-family: var(--mono); font-size: 0.82rem; font-weight: 600;
+      letter-spacing: 0.3px; color: var(--text-strong); text-decoration: none;
+    }
+    .site-nav .brand:hover { color: var(--accent-bright); }
+    .site-nav .nav-links { display: flex; align-items: center; gap: 4px; }
+    .site-nav .nav-links a {
+      font-family: var(--mono); font-size: 0.8rem; font-weight: 500;
+      color: var(--text-mute); text-decoration: none;
+      padding: 7px 13px; border-radius: 8px; border: 1px solid transparent;
+      transition: color 0.2s, background 0.2s, border-color 0.2s;
+    }
+    .site-nav .nav-links a:hover { color: var(--accent-bright); background: var(--accent-soft); }
+    .site-nav .nav-links a.gh { color: var(--accent); border-color: var(--border-hover); background: var(--accent-soft); }
+    .site-nav .nav-links a.gh:hover { border-color: var(--accent); }
+
+    .hero { margin-bottom: 64px; }
+    h1 {
+      font-size: clamp(2.4rem, 6vw, 3.6rem); font-weight: 700;
+      margin: 22px 0; letter-spacing: -1.2px; line-height: 1.04;
+      background: linear-gradient(120deg, var(--text-strong) 0%, var(--accent-bright) 60%, var(--sutra) 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    h1 .serif { font-family: var(--serif); font-style: italic; font-weight: 400; }
+    .tagline { font-size: 1.18rem; color: var(--text-mute); line-height: 1.65; max-width: 600px; }
+    .tagline strong { color: var(--text-strong); font-weight: 600; }
+    .tagline .em { font-family: var(--serif); font-style: italic; font-size: 1.12em; color: var(--text); }
+    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 30px; }
+
+    h2 {
+      display: flex; align-items: center; gap: 14px;
+      font-family: var(--mono); font-size: 0.72rem; font-weight: 500;
+      text-transform: uppercase; letter-spacing: 2px; color: var(--text-mute);
+      margin-bottom: 26px;
+    }
+    h2 .num { color: var(--accent); }
+    h2::after { content: ''; flex: 1; height: 1px; background: linear-gradient(to right, var(--border-strong), transparent); }
+    .section { margin-bottom: 72px; }
+
+    .lead { font-size: 1.04rem; line-height: 1.8; color: var(--text); max-width: 660px; }
+    .lead p { margin-bottom: 16px; }
+    .lead p:last-child { margin-bottom: 0; }
+    .lead strong { color: var(--text-strong); font-weight: 600; }
+
+    .chapters { display: grid; gap: 12px; }
+    .chapter {
+      display: flex; align-items: baseline; gap: 18px;
+      padding: 20px 24px; background: var(--bg-card);
+      border: 1px solid var(--border); border-radius: 12px;
+      text-decoration: none; color: inherit;
+      transition: transform 0.22s, border-color 0.22s, background 0.22s, box-shadow 0.22s;
+    }
+    .chapter:hover {
+      transform: translateY(-2px); border-color: var(--border-hover);
+      background: var(--bg-elevated); box-shadow: 0 18px 40px -26px var(--accent-glow);
+    }
+    .ch-num {
+      font-family: var(--serif); font-style: italic; font-size: 1.6rem;
+      color: var(--accent); opacity: 0.7; flex: none; width: 1.6rem; line-height: 1;
+    }
+    .ch-body { min-width: 0; }
+    .ch-title { font-size: 1.05rem; font-weight: 600; color: var(--text-strong); margin-bottom: 4px; }
+    .ch-desc { font-size: 0.92rem; color: var(--text-mute); line-height: 1.6; }
+
+    .callout {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 20px; flex-wrap: wrap;
+      padding: 26px 30px; border-radius: 14px;
+      background: linear-gradient(135deg, var(--accent-soft) 0%, transparent 60%), var(--bg-card);
+      border: 1px solid var(--border-hover);
+    }
+    .callout-text { min-width: 0; }
+    .callout-title { font-family: var(--serif); font-style: italic; font-size: 1.4rem; color: var(--text-strong); margin-bottom: 6px; }
+    .callout-desc { font-size: 0.95rem; color: var(--text-mute); line-height: 1.6; }
+    .callout-desc code {
+      font-family: var(--mono); font-size: 0.86em; color: var(--accent-bright);
+      background: var(--accent-soft); padding: 2px 7px; border-radius: 4px;
+      border: 1px solid var(--accent-soft);
+    }
+
+    .sig { margin-top: 72px; display: flex; align-items: center; gap: 14px; color: var(--text-faint); font-family: var(--mono); font-size: 0.72rem; letter-spacing: 1px; }
+    .sig::before { content: ''; width: 24px; height: 1px; background: var(--border-strong); }
+
+    @media (max-width: 600px) {
+      body { padding: 70px 18px 90px; }
+      .site-nav { padding: 11px 16px; }
+      .site-nav .nav-links a { padding: 6px 9px; font-size: 0.72rem; }
+      .section { margin-bottom: 52px; }
+      .chapter { padding: 16px 18px; gap: 14px; }
+    }
+  </style>
+</head>
+<body>
+  <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle light and dark theme" title="Toggle light / dark">
+    <svg class="icon-sun" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9M12,2L14.39,5.42C13.65,5.15 12.84,5 12,5C11.16,5 10.35,5.15 9.61,5.42L12,2M3.34,7L7.5,6.65C6.9,7.16 6.36,7.78 5.94,8.5C5.5,9.24 5.25,10 5.11,10.79L3.34,7M3.36,17L5.12,13.23C5.26,14 5.53,14.78 5.95,15.5C6.37,16.24 6.91,16.86 7.5,17.37L3.36,17M20.65,7L18.88,10.79C18.74,10 18.47,9.23 18.05,8.5C17.63,7.78 17.1,7.15 16.5,6.64L20.65,7M20.64,17L16.5,17.36C17.09,16.85 17.62,16.22 18.04,15.5C18.46,14.77 18.73,14 18.87,13.21L20.64,17M12,22L9.59,18.56C10.33,18.83 11.14,19 12,19C12.82,19 13.63,18.86 14.37,18.59L12,22Z"></path></svg>
+    <svg class="icon-moon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.75,4.09L15.22,6.03L16.13,9.09L13.5,7.28L10.87,9.09L11.78,6.03L9.25,4.09L12.44,4L13.5,1L14.56,4L17.75,4.09M21.25,11L19.61,12.25L20.2,14.23L18.5,13.06L16.8,14.23L17.39,12.25L15.75,11L17.81,10.95L18.5,9L19.19,10.95L21.25,11M18.97,15.95C19.8,15.87 20.69,17.05 20.16,17.8C19.84,18.25 19.5,18.67 19.08,19.07C15.17,23 8.84,23 4.94,19.07C1.03,15.17 1.03,8.83 4.94,4.93C5.34,4.53 5.76,4.17 6.21,3.85C6.96,3.32 8.14,4.21 8.06,5.04C7.79,7.9 8.75,10.87 10.95,13.06C13.14,15.26 16.1,16.22 18.97,15.95M17.33,17.97C14.5,17.81 11.7,16.64 9.53,14.5C7.36,12.31 6.2,9.5 6.04,6.68C3.23,9.82 3.34,14.4 6.35,17.41C9.37,20.43 14,20.54 17.33,17.97Z"></path></svg>
+  </button>
+
+  <nav class="site-nav" aria-label="Primary">
+    <a class="brand" href="/">Vibe Coding Tutorial</a>
+    <div class="nav-links">
+      <a href="https://emmaleonhart.com">Emma Leonhart</a>
+      <a href="https://cleanvibe.emmaleonhart.com">cleanvibe</a>
+      <a class="gh" href="https://github.com/EmmaLeonhart/vibecoding-tutorial">GitHub</a>
+    </div>
+  </nav>
+
+  <div class="aurora" aria-hidden="true"></div>
+
+  <div class="container">
+
+    <header class="hero">
+      <span class="eyebrow">A practical guide</span>
+      <h1>Vibe Coding, <span class="serif">done properly</span></h1>
+      <p class="tagline">Vibe coding is <strong>not</strong> pasting a chatbot's output and hoping. It is a discipline: building real software through AI collaboration while you stay in control &mdash; <span class="em">documented, version-controlled, and tested</span>. This tutorial takes you from zero to a working workflow.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="https://github.com/EmmaLeonhart/vibecoding-tutorial/blob/master/docs/00-beginner-setup.md">Start from zero &rarr;</a>
+        <a class="btn btn-secondary" href="https://github.com/EmmaLeonhart/vibecoding-tutorial">Read on GitHub</a>
+      </div>
+    </header>
+
+    <section class="section">
+      <h2><span class="num">01 &mdash;</span> What this is</h2>
+      <div class="lead">
+        <p>Vibe coding done right is a serious, intentional workflow &mdash; not a buzzword. It means collaborating with AI agents to build software while keeping a clear understanding of what your program does, keeping everything documented, and using version control to track every change.</p>
+        <p>This guide is written for <strong>complete beginners</strong> who want to start building through AI collaboration, and for <strong>experienced developers</strong> adopting AI-assisted workflows with proper practices. You clone the repo, open it in an AI coding agent, and watch every change land in version control as you go.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2><span class="num">02 &mdash;</span> The tutorial</h2>
+      <div class="chapters">
+        <a class="chapter" href="https://github.com/EmmaLeonhart/vibecoding-tutorial/blob/master/docs/00-beginner-setup.md">
+          <span class="ch-num">0</span>
+          <span class="ch-body"><span class="ch-title">Complete Beginner Setup Guide</span><span class="ch-desc">Zero to your first AI coding session &mdash; accounts, installs, and your first project.</span></span>
+        </a>
+        <a class="chapter" href="https://github.com/EmmaLeonhart/vibecoding-tutorial/blob/master/docs/01-what-is-vibecoding.md">
+          <span class="ch-num">1</span>
+          <span class="ch-body"><span class="ch-title">What Vibe Coding Actually Is</span><span class="ch-desc">The discipline beyond the buzzword &mdash; why it needs intention and programming awareness.</span></span>
+        </a>
+        <a class="chapter" href="https://github.com/EmmaLeonhart/vibecoding-tutorial/blob/master/docs/02-tools-and-setup.md">
+          <span class="ch-num">2</span>
+          <span class="ch-body"><span class="ch-title">Essential Tools and Setup</span><span class="ch-desc">Your environment: cleanvibe, git, an AI agent, and GitHub Desktop for visual diffs.</span></span>
+        </a>
+        <a class="chapter" href="https://github.com/EmmaLeonhart/vibecoding-tutorial/blob/master/docs/03-documentation-first.md">
+          <span class="ch-num">3</span>
+          <span class="ch-body"><span class="ch-title">Documentation-First Development</span><span class="ch-desc">Documentation is how you keep control &mdash; READMEs and specs that stay current.</span></span>
+        </a>
+        <a class="chapter" href="https://github.com/EmmaLeonhart/vibecoding-tutorial/blob/master/docs/04-version-control.md">
+          <span class="ch-num">4</span>
+          <span class="ch-body"><span class="ch-title">Version Control Is Non-Negotiable</span><span class="ch-desc">Git and GitHub Desktop as the visibility layer over every AI-generated change.</span></span>
+        </a>
+        <a class="chapter" href="https://github.com/EmmaLeonhart/vibecoding-tutorial/blob/master/docs/05-testing.md">
+          <span class="ch-num">5</span>
+          <span class="ch-body"><span class="ch-title">Testing and Quality Assurance</span><span class="ch-desc">Unit tests as a safety net &mdash; a failed test is information, not a failure.</span></span>
+        </a>
+        <a class="chapter" href="https://github.com/EmmaLeonhart/vibecoding-tutorial/blob/master/docs/06-addressing-critics.md">
+          <span class="ch-num">6</span>
+          <span class="ch-body"><span class="ch-title">Addressing the Critics</span><span class="ch-desc">Technical debt, debugging difficulty, and security &mdash; real, and all preventable.</span></span>
+        </a>
+        <a class="chapter" href="https://github.com/EmmaLeonhart/vibecoding-tutorial/blob/master/docs/07-learning-through-vibecoding.md">
+          <span class="ch-num">7</span>
+          <span class="ch-body"><span class="ch-title">Learning to Code Through Vibe Coding</span><span class="ch-desc">Building real programming knowledge alongside AI-assisted development.</span></span>
+        </a>
+        <a class="chapter" href="https://github.com/EmmaLeonhart/vibecoding-tutorial/blob/master/docs/08-project-ideas.md">
+          <span class="ch-num">8</span>
+          <span class="ch-body"><span class="ch-title">Project Ideas for Beginners</span><span class="ch-desc">15 starter projects with the exact prompts to hand your AI agent.</span></span>
+        </a>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2><span class="num">03 &mdash;</span> Scaffold it</h2>
+      <div class="callout">
+        <div class="callout-text">
+          <div class="callout-title">cleanvibe</div>
+          <div class="callout-desc">Start every project with a clean structure: <code>pip install cleanvibe</code> then <code>cleanvibe new my-project</code> gives you a git repo, documentation scaffolding, and a sane starting point for vibe coding.</div>
+        </div>
+        <a class="btn btn-secondary" href="https://cleanvibe.emmaleonhart.com">cleanvibe &rarr;</a>
+      </div>
+    </section>
+
+    <div class="sig">vibecoding.emmaleonhart.com</div>
+
+  </div>
+  <script>(function(){var b=document.getElementById('theme-toggle');if(!b)return;b.addEventListener('click',function(){var c=document.documentElement.getAttribute('data-theme')==='light'?'light':'dark';var n=c==='light'?'dark':'light';document.documentElement.setAttribute('data-theme',n);try{localStorage.setItem('theme',n);}catch(e){}});})();</script>
+</body>
+</html>
