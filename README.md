@@ -1,5 +1,7 @@
 # Vibe Coding Tutorial
 
+**Website · [vibecoding.emmaleonhart.com](https://vibecoding.emmaleonhart.com)**
+
 A practical guide to vibe coding — the discipline of building software through AI collaboration with intention, documentation, and quality practices.
 
 ---
